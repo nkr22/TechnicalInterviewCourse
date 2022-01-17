@@ -2,8 +2,8 @@
 test=[1,5,6,8,2,3]
 
 def minmax (arr):
-    min=arr[1]
-    max=arr[1]
+    min=arr[0]
+    max=arr[0]
     for i in range(0, len(arr)):
         if arr[i]<min:
             min=arr[i]

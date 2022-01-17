@@ -6,3 +6,26 @@
 
 input_accounts = [[2,8,7],[7,1,3],[1,9,5]]
 # Output: 17
+
+def richcustomer(arr):
+    mostwealth=0
+    for i in range (0, len(arr)):
+        currentcustwealth=0
+        for j in range (0,len(arr[i])):
+            currentcustwealth+=arr[i][j]
+        if currentcustwealth>mostwealth:
+            mostwealth=currentcustwealth
+    return mostwealth
+
+print(richcustomer(input_accounts))
+
+def richcustomer2(arr):
+    mostwealth=0
+    for i in range (0, len(arr)):
+        currentcustwealth=0
+        currentcustwealth=sum(arr[i])
+        if currentcustwealth>mostwealth:
+            mostwealth=currentcustwealth
+    return mostwealth
+
+print(richcustomer2(input_accounts))
