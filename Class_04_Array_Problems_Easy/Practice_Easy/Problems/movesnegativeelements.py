@@ -4,4 +4,4 @@ def movenegative (arr):
     i=0
     length=len(arr)
     while i <length:
-        
+        if arr[i]<0:
