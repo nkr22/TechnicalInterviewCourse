@@ -1,32 +1,3 @@
-# A simple Python program to introduce a linked list
-
-class Node:
-
-	def __init__(self, data):
-		self.data = data 
-		self.next = None 
-
-
-class LinkedList:
-
-	def __init__(self):
-		self.head = None
-
-
-if __name__=='__main__':
-
-	llist = LinkedList()
-
-	llist.head = Node(1)
-	second = Node(2)
-	third = Node(3)
-
-	llist.head.next = second; 
-
-	second.next = third; 
-
-
-###### what she did in class
 class Node:
 
 	def __init__(self, data):
@@ -54,8 +25,20 @@ class LinkedList:
 			print(current.data)
 			current=current.next
 
+	def reverse(self):
+		previous=None
+		current=self.head
+		while(current is not None):
+			next=current.next
+			current.next=previous
+			previous=current
+			current=next
+		self.head=previous
+
 LL= LinkedList()
 LL.insert(3)
 LL.insert(4)
 LL.insert(5)
+LL.printLL()
+LL.reverse()
 LL.printLL()
